@@ -2,10 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Foo</title>
+    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
   </head>
   <body>
-    <h1>Bar</h1>
-    <p>Aardvark</p>
+    <div class="page">
+      <header class="site-header">
+        <h1 class="site-title">Notes</h1>
+        <p class="site-tagline">
+          Some thoughts on things.
+        </p>
+      </header>
+
+      <main>
+        <section id="about" class="section section--about">
+          <h2 class="section-title">About</h2>
+          <p class="about-text">
+            I would like to start writing regularly about different things. I'm trying to learn
+            a lot of new stuff these days, and writing would probably help me structure my thoughts 
+            and remember things better.
+          </p>
+        </section>
+
+        <section id="posts" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Posts</h2>
+          </div>
+
+          <div class="tabs" id="post-tabs">
+            <button class="tab tab--active" data-category="category_1">
+              Category 1
+            </button>
+            <button class="tab" data-category="category_2">Category 2</button>
+            <button class="tab" data-category="misc">Miscellaneous</button>
+          </div>
+
+          <div id="post-list" class="post-list"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <!-- <span id="year"></span> -->
+        <!-- <span>Foo. </span> -->
+        <!-- <span>Bar. </span> -->
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
